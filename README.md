@@ -1,21 +1,14 @@
 # MASTER IAM Skills
 
-Free, vendor-neutral Agent Skills for reviewing access control, designing permissions, learning Identity and Access Management (IAM), and planning an IAM career.
+Free, vendor-neutral Agent Skills for learning Identity and Access Management (IAM), planning an IAM career, and reviewing access control.
 
-## Review Access Control
+## Skill status
 
-`review-access-control` is an IAM access-control reviewer and learning companion for web applications and APIs.
+### Production
 
-Use it to:
+Production skills are ready for normal use.
 
-- inspect an authorized codebase for broken access control;
-- find cross-user, cross-role, and cross-organization access risks;
-- review ownership, sharing, delegation, roles, and permissions;
-- design Role-Based Access Control (RBAC), Attribute-Based Access Control (ABAC), or Relationship-Based Access Control (ReBAC);
-- create permission maps, review reports, and authorization test plans;
-- connect IAM concepts to application behavior, labs, and certification topics.
-
-## IAM Career Interviewer
+#### IAM Career Interviewer
 
 `plan-iam-career` asks a short series of questions and creates a focused IAM career plan.
 
@@ -30,65 +23,72 @@ It uses:
 
 The result includes a recommended role, three main gaps, one certification, one portfolio project, and goals for 30, 60, and 90 days. When file tools are available, the skill also creates a downloadable Markdown career plan.
 
-## Install
-
-Install a skill with the Agent Skills CLI:
-
-### Review Access Control
-
-```bash
-npx skills@latest add Sefyu24/master-iam-skills --skill=review-access-control
-```
-
-### IAM Career Interviewer
+Install it with the Agent Skills CLI:
 
 ```bash
 npx skills@latest add Sefyu24/master-iam-skills --skill=plan-iam-career
 ```
 
-The repository is private while the first release is under review. Installation requires access to the repository.
-
-## Try it
-
-### Review a repository
-
-```text
-Use $review-access-control to review this application. Treat organization membership as a security boundary. Check whether a member of one organization can read or change another organization's workspaces, billing settings, exports, or membership. Do not modify code. Show evidence for each conclusion.
-```
-
-### Design permissions
-
-```text
-Use $review-access-control to design permissions for a collaborative media library. A person can join several studios. Each studio owns collections and media assets. Studio owners can invite guests to one collection for a limited time. Produce a permission map and an authorization test plan.
-```
-
-### Learn through a lab
-
-```text
-Use $review-access-control as my IAM learning companion for this lab. Explain the transferable concept behind each important setting. Point out assumptions, show one small application example, and ask three short questions to check my understanding.
-```
-
-### Plan an IAM career
+Try it:
 
 ```text
 Use $plan-iam-career to interview me and create my IAM career plan. Ask one question at a time and keep the final plan short.
 ```
 
-## How it communicates
+### Testing
 
-The skill uses ASD-STE100-inspired clear technical English. It favors active voice, short sentences, one main idea per sentence, consistent terminology, and concrete examples.
+Testing skills are public for early use and feedback. Their behavior and file structure can change.
+
+#### Review Access Control
+
+`review-access-control` is an IAM access-control reviewer and learning companion for web applications and APIs.
+
+Use it to:
+
+- inspect an authorized codebase for broken access control;
+- find cross-user, cross-role, and cross-organization access risks;
+- review ownership, sharing, delegation, roles, and permissions;
+- design Role-Based Access Control (RBAC), Attribute-Based Access Control (ABAC), or Relationship-Based Access Control (ReBAC);
+- create permission maps, review reports, and authorization test plans;
+- connect IAM concepts to application behavior, labs, and certification topics.
+
+Install the testing version:
+
+```bash
+npx skills@latest add Sefyu24/master-iam-skills --skill=review-access-control
+```
+
+Try it:
+
+```text
+Use $review-access-control to review this application. Treat organization membership as a security boundary. Do not modify code. Show evidence for each conclusion.
+```
+
+## Repository structure
+
+```text
+skills/
+├── production/
+│   └── plan-iam-career/
+└── testing/
+    └── review-access-control/
+```
+
+## How the skills communicate
+
+The skills use ASD-STE100-inspired clear technical English. They favor active voice, short sentences, one main idea per sentence, consistent terminology, and concrete examples.
 
 This is a writing approach. It is not a claim of formal ASD-STE100 compliance.
 
 ## Knowledge sources
 
-The skill is written from public, authoritative sources and practical application-security methods. The source guide links to the relevant standards and projects.
+The skills use public, authoritative sources and practical IAM and application-security methods. They verify current vendor and certification details before making recommendations.
 
 ## Safety
 
-Use the skill only on systems and artifacts that you are authorized to inspect.
+Use the skills only on systems and artifacts that you are authorized to inspect.
 
-The skill supports focused IAM and access-control work. It does not replace a complete penetration test, compliance assessment, or legal review.
+The testing access-control skill supports focused review work. It does not replace a complete penetration test, compliance assessment, or legal review.
 
 ## License
 
