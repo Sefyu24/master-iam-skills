@@ -28,7 +28,7 @@ It uses:
 - current employer and job-market evidence;
 - your available study time and career deadline.
 
-The result includes a recommended role, three main gaps, one certification, one portfolio project, and goals for 30, 60, and 90 days.
+The result includes a recommended role, three main gaps, one certification, one portfolio project, and goals for 30, 60, and 90 days. When file tools are available, the skill also creates a downloadable Markdown career plan.
 
 ## Install
 
