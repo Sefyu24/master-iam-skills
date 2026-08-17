@@ -1,6 +1,6 @@
 # MASTER IAM Skills
 
-Free, vendor-neutral Agent Skills for reviewing access control, designing permissions, and learning Identity and Access Management (IAM) through practical work.
+Free, vendor-neutral Agent Skills for reviewing access control, designing permissions, learning Identity and Access Management (IAM), and planning an IAM career.
 
 ## Review Access Control
 
@@ -15,15 +15,38 @@ Use it to:
 - create permission maps, review reports, and authorization test plans;
 - connect IAM concepts to application behavior, labs, and certification topics.
 
+## IAM Career Interviewer
+
+`plan-iam-career` asks a short series of questions and creates a focused IAM career plan.
+
+It uses:
+
+- your location and work preferences;
+- your target roles and companies;
+- your education, experience, and certifications;
+- your IAM and coding interests;
+- current employer and job-market evidence;
+- your available study time and career deadline.
+
+The result includes a recommended role, three main gaps, one certification, one portfolio project, and goals for 30, 60, and 90 days.
+
 ## Install
 
-Install the skill with the Agent Skills CLI:
+Install a skill with the Agent Skills CLI:
+
+### Review Access Control
 
 ```bash
 npx skills@latest add Sefyu24/master-iam-skills --skill=review-access-control
 ```
 
-The repository is private while the first release is under review. The command will work after the owner approves a public release.
+### IAM Career Interviewer
+
+```bash
+npx skills@latest add Sefyu24/master-iam-skills --skill=plan-iam-career
+```
+
+The repository is private while the first release is under review. Installation requires access to the repository.
 
 ## Try it
 
@@ -43,6 +66,12 @@ Use $review-access-control to design permissions for a collaborative media libra
 
 ```text
 Use $review-access-control as my IAM learning companion for this lab. Explain the transferable concept behind each important setting. Point out assumptions, show one small application example, and ask three short questions to check my understanding.
+```
+
+### Plan an IAM career
+
+```text
+Use $plan-iam-career to interview me and create my IAM career plan. Ask one question at a time and keep the final plan short.
 ```
 
 ## How it communicates
