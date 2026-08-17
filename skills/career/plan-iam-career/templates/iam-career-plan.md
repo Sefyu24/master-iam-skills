@@ -1,8 +1,8 @@
 # IAM Career Plan
 
-**Prepared on:** [Date]  
-**Location:** [City and country]  
-**Target date:** [Application target date]
+- **Prepared on:** [Date]
+- **Location:** [City and country]
+- **Target date:** [Application target date]
 
 > **90-day objective:** [One sentence that states the role and measurable outcome.]
 
