@@ -1,7 +1,5 @@
 # MASTER IAM Skills
 
-Free, vendor-neutral Agent Skills for learning Identity and Access Management (IAM), planning an IAM career, and reviewing access control.
-
 ## Skill status
 
 ### Production
