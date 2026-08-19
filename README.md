@@ -1,7 +1,5 @@
 # MASTER IAM Skills
 
-Free, vendor-neutral Agent Skills for learning Identity and Access Management (IAM), planning an IAM career, and reviewing access control.
-
 ## Skill status
 
 ### Production
@@ -35,10 +33,6 @@ Try it:
 Use $plan-iam-career to interview me and create my IAM career plan. Ask one question at a time and keep the final plan short.
 ```
 
-### Testing
-
-Testing skills are public for early use and feedback. Their behavior and file structure can change.
-
 #### Review Access Control
 
 `review-access-control` is an IAM access-control reviewer and learning companion for web applications and APIs.
@@ -52,7 +46,7 @@ Use it to:
 - create permission maps, review reports, and authorization test plans;
 - connect IAM concepts to application behavior, labs, and certification topics.
 
-Install the testing version:
+Install it with the Agent Skills CLI:
 
 ```bash
 npx skills@latest add Sefyu24/master-iam-skills --skill=review-access-control
@@ -68,9 +62,8 @@ Use $review-access-control to review this application. Treat organization member
 
 ```text
 skills/
-├── production/
-│   └── plan-iam-career/
-└── testing/
+└── production/
+    ├── plan-iam-career/
     └── review-access-control/
 ```
 
@@ -88,7 +81,7 @@ The skills use public, authoritative sources and practical IAM and application-s
 
 Use the skills only on systems and artifacts that you are authorized to inspect.
 
-The testing access-control skill supports focused review work. It does not replace a complete penetration test, compliance assessment, or legal review.
+The access-control skill supports focused review work. It does not replace a complete penetration test, compliance assessment, or legal review.
 
 ## License
 
