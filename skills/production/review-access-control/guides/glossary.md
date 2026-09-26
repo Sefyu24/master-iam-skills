@@ -1,0 +1,70 @@
+# Glossary
+
+Use one term for one concept. When two names exist, the entry names the one this skill uses.
+
+- **Access review:** A scheduled or event-driven check in which an accountable reviewer confirms or removes access. Also called access certification.
+- **Accountable owner:** The person or team that accepts responsibility for a non-human identity or delegated activity. Some governance tools call this person or team the sponsor.
+- **Account:** The record that one application or platform uses for an entity.
+- **Accounting:** Recording security-relevant activity and decisions for later review.
+- **Actor:** An entity that performs an action in a system.
+- **Attribute:** A named value about an actor, resource, action, or environment.
+- **Attribute-Based Access Control (ABAC):** An authorization model that decides access from trusted attributes.
+- **Authentication:** Verification of an identity claim through one or more approved authenticators.
+- **Authenticator:** Something the claimant (the entity that tries to authenticate) possesses or controls and uses to authenticate.
+- **Authorization:** A decision about whether an actor can perform an action on a resource under current conditions.
+- **Break glass:** A pre-approved emergency path to privileged access during an incident. Limit it in time and review every use.
+- **Confidence:** How strongly the evidence supports an observation: Confirmed, High, Moderate, or Low.
+- **Correlation:** Linking an account to the correct identity or accountable owner.
+- **Credential:** A trusted binding between an identity and identity evidence or one or more authenticators.
+- **Default deny:** The rule that the system denies access when no approved rule permits it.
+- **Delegation:** A governed arrangement that lets one entity act for another within a defined scope and time.
+- **Design concern:** An observation class. The design makes correct enforcement difficult to establish.
+- **Disabled account:** An account that the target system blocks from normal use. Its sessions, tokens, keys, or delegated access can still work.
+- **Dormant account:** An account that nobody has used during a defined period.
+- **Effective control:** An observation class. A useful control is present and traceable.
+- **Entitlement:** A grantable access item that a target system exposes, such as a permission, group, role, license, profile, or policy assignment.
+- **Entity:** A person or non-person that can act, be identified, or receive access.
+- **Federation:** A trust arrangement in which one security domain relies on identity information from another. It often supports single sign-on, but the terms are not synonyms.
+- **Identity:** A system's representation of an entity. An enterprise identity links one entity's records across systems.
+- **Identity and Access Management (IAM):** The discipline that controls how an organization represents entities and governs what they can access.
+- **Identity Governance and Administration (IGA):** The part of IAM that governs access over time through lifecycle events, requests, approvals, provisioning, reconciliation, access reviews, ownership, policy, and audit evidence.
+- **Identity proofing:** Establishing confidence that an applicant is the claimed person or entity.
+- **Identity Provider (IdP):** A service that authenticates an entity and issues identity assertions or tokens.
+- **Insecure direct object reference (IDOR):** An access failure in which a caller changes an object identifier to reach an object it must not access. Application programming interface (API) guidance calls it broken object level authorization (BOLA).
+- **Joiner:** The lifecycle event in which an entity starts a governed relationship with an organization. `identity-context.md` calls it a Start event.
+- **Least privilege:** Limiting access to what an approved purpose requires.
+- **Leaver:** The lifecycle event in which an entity ends its governed relationship with an organization. `identity-context.md` calls it an End event.
+- **Mass assignment:** An access failure in which an application copies caller-supplied fields into a record without an allow list. The caller can then set role, owner, tenant, or status.
+- **Mover:** The lifecycle event in which an entity's responsibility, department, project, location, tenant membership, employment status, or risk changes. `identity-context.md` calls it a Change event.
+- **Multi-factor authentication (MFA):** Authentication that uses more than one factor category: something the claimant knows, has, or is. Two passwords are one factor category.
+- **Non-human identity (NHI):** An identity for a service, workload, application, device, integration, robot, or artificial intelligence (AI) agent.
+- **Observation:** One reported result of a review: a Verified weakness, Probable weakness, Design concern, Policy question, or Effective control.
+- **Organization:** The enterprise or institution, such as an employer, that runs IAM processes. This skill uses organization only in this sense or when quoting an application's term for a tenant. A department move is a mover event, not a tenant change.
+- **Orphan account:** An account for which no valid identity or accountable owner remains responsible.
+- **Permission:** An allowed action on a resource.
+- **Policy Administration Point (PAP):** The logical component that manages policy definitions and changes.
+- **Policy Decision Point (PDP):** The logical component that evaluates authorization policy.
+- **Policy Enforcement Point (PEP):** The logical component that intercepts a request and applies the decision.
+- **Policy Information Point (PIP):** A source of attributes, relationships, risk, or other data that a decision needs.
+- **Policy question:** An observation class. The intended access rule is missing or contradictory.
+- **Privilege escalation:** An access failure in which an actor gains access beyond its approved scope. Horizontal escalation reaches another actor's resources at the same level. Vertical escalation reaches a more privileged function.
+- **Privileged access:** Access that can change security settings or other actors' access, reach secrets, or act across many resources or tenants. Govern it with stronger approval, shorter duration, and closer monitoring.
+- **Probable weakness:** An observation class. The evidence strongly suggests an access failure, but a relevant runtime fact or control is unavailable.
+- **Provisioning:** Creating, changing, or removing accounts and access in target systems.
+- **Reconciliation:** Comparing intended access with actual target-system state to detect failed changes and drift.
+- **Relationship:** A governed connection between an actor and a resource, or between two resources, such as member, owner, viewer, parent, or delegate.
+- **Relationship tuple:** A stored relationship in subject, relation, object order. `user:noor - member - studio:meteor` reads left to right: Noor is a member of the Meteor studio.
+- **Relationship-Based Access Control (ReBAC):** An authorization model that decides access from relationships between actors and resources, or between resources.
+- **Relying Party (RP):** An application that relies on an identity or authorization service. Security Assertion Markup Language (SAML) 2.0 calls it a service provider.
+- **Role:** A managed set of permissions associated with a business or technical responsibility.
+- **Role-Based Access Control (RBAC):** An authorization model that grants permissions through roles assigned to actors.
+- **Separation of duties:** A rule that prevents one actor from controlling incompatible steps of a sensitive process, such as requesting and approving the same access.
+- **Service account:** An account that software or automation uses instead of a person.
+- **Session:** A security context that continues across requests after authentication or another trusted event.
+- **Severity:** The realistic impact and reachability of a weakness: Critical, High, Medium, or Low. Do not assign it from a pattern name. `finding-severity.md` defines each level.
+- **Single sign-on (SSO):** A sign-in experience that gives access to more than one application without a new primary authentication for each one.
+- **Source of truth:** The authoritative source for one defined data element or decision. Example: a human resources (HR) system can be authoritative for employment status, not application roles.
+- **Subject:** The identity that an authorization policy evaluates. Policy standards often say subject where this skill says actor.
+- **Tenant:** An isolation boundary that keeps one customer's or group's data, configuration, and access separate in a shared application. Isolation can be logical (a tenant identifier on every query) or physical (a separate database). Applications also call a tenant an organization, workspace, or account. In this skill, account means only an entity's record in one system.
+- **Uncorrelated account:** An account with no trusted link to an enterprise identity or accountable owner.
+- **Verified weakness:** An observation class. The available evidence shows a reachable access failure.
