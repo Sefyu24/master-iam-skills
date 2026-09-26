@@ -1,0 +1,4 @@
+interface:
+  display_name: "MASTER IAM Access Control Reviewer"
+  short_description: "Review and design application permissions"
+  default_prompt: "Use $review-access-control to review this application for broken access control. Propose evidence-backed corrections and denied-path tests."

@@ -1,6 +1,16 @@
 # Identity context for application access
 
-Use this guide when a review or learning request involves identity records, accounts, authentication, federation, lifecycle changes, or non-human actors.
+Use this guide when a review or learning request involves identity records, accounts, authentication, federation, lifecycle changes, or non-human actors. It is a short overview.
+
+## Read a deeper guide
+
+When a question needs more depth on one topic, read only the guide that matches it:
+
+- `iam-foundations.md`: core identity objects, identity versus account, the four security functions, and access principles such as least privilege.
+- `authentication-and-federation.md`: proofing, authenticators, assurance levels, sessions, single sign-on, federation, and identity protocols.
+- `lifecycle-and-governance.md`: joiner, mover, and leaver events, provisioning, reconciliation, correlation, access reviews, and privilege accumulation.
+- `non-human-identities-and-agents.md`: service accounts, workloads, integrations, and agents, including offboarding and delegation checks.
+- `glossary.md`: short definitions of the terms that these guides use.
 
 ## Working objects
 
@@ -8,12 +18,13 @@ Use this guide when a review or learning request involves identity records, acco
 - **Identity:** A system's representation of an entity.
 - **Account:** A record that one application or platform uses for an entity.
 - **Identifier:** A value that distinguishes a record within a defined namespace.
-- **Authenticator:** Something the claimant controls and uses to authenticate.
+- **Authenticator:** Something the claimant (the entity that tries to authenticate) controls and uses to authenticate.
 - **Credential:** A trusted binding between an identity and identity evidence or one or more authenticators.
 - **Permission:** An allowed action on a resource.
 - **Entitlement:** A grantable access item exposed by a target system.
 - **Role:** A managed permission set associated with a responsibility.
 - **Relationship:** A governed connection such as member, owner, viewer, parent, or delegate.
+- **Tenant:** An isolation boundary that keeps one customer's or group's data, configuration, and access separate in a shared application.
 
 One entity can have accounts in several systems. Do not assume that a matching display name or email address proves that two accounts belong to the same entity.
 
@@ -33,14 +44,14 @@ A successful sign-in supplies identity context. It does not grant every applicat
 Review:
 
 - how an authenticator becomes bound to an identity;
-- which factors and assurance are required for sensitive actions;
+- which factors and assurance level the application requires for sensitive actions;
 - how recovery can change or replace authenticators;
 - what claims enter a session;
 - how long the session and refresh capability remain usable;
-- when reauthentication or step-up is required;
-- how sign-out, revocation, role changes, and organization changes affect existing sessions.
+- when the application requires reauthentication or step-up authentication;
+- how sign-out, revocation, role changes, and tenant membership changes affect existing sessions.
 
-Authentication freshness and authorization freshness are different. A recent sign-in can still carry an outdated role or organization membership.
+Authentication freshness and authorization freshness are different. A recent sign-in can still carry an outdated role or tenant membership.
 
 ## Federation
 
@@ -51,8 +62,8 @@ An application that accepts an upstream assertion or token must still:
 - validate the issuer, signature, audience, and time limits;
 - use the correct token type;
 - protect account linking and callback flows;
-- decide which claims are trusted for business authorization;
-- apply local resource and organization rules;
+- decide which claims it trusts for business authorization;
+- apply local resource and tenant rules;
 - handle claim changes and session termination.
 
 OAuth 2.0 supports delegated access. OpenID Connect adds an identity layer for authentication. A valid access token does not prove permission for every object or business action.
@@ -61,9 +72,9 @@ OAuth 2.0 supports delegated access. OpenID Connect adds an identity layer for a
 
 Model access as changing state:
 
-- **Start:** Create or connect the identity and grant approved initial access.
-- **Change:** Recalculate access when responsibility, project, organization, risk, or status changes.
-- **End:** Remove access, terminate usable sessions, reassign owned resources, and preserve required evidence.
+- **Start (joiner):** Create or connect the identity and grant approved initial access.
+- **Change (mover):** Recalculate access when responsibility, department, project, location, employment status, tenant membership, or risk changes.
+- **End (leaver):** Remove access, terminate usable sessions, reassign owned resources, and preserve required evidence.
 - **Temporary grant:** Record a purpose and expiry, then remove the grant automatically.
 
 Reconciliation compares intended access with actual target state. Use it to detect failed changes, unexpected accounts, direct grants, and drift.
@@ -72,7 +83,7 @@ Correlation connects an account to the correct identity or accountable owner. Pr
 
 ## Non-human actors
 
-Apply the same access discipline to a service, workload, integration, API client, or AI agent.
+Apply the same access discipline to a service, workload, integration, application programming interface (API) client, or artificial intelligence (AI) agent.
 
 Record:
 
